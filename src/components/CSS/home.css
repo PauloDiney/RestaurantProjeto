@@ -1,0 +1,232 @@
+:root{
+    --black: #000000;
+    --orange: #E04F17;
+    --begeClaro: #F0E7DA;
+    --cinzaEscuro: #1A1A1A;
+    --white: #FFFFFF;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html{
+    font-family: 'Poppins', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  
+  }
+  
+  .container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header_log{
+    width: 25%;
+    height: 100vh;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    gap: 2em;
+    padding: 1em;
+    box-shadow: 5px 0px 10px var(--orange); /* Sombra na lateral direita */
+    z-index: 1;
+  }
+  
+  .logo{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header_title{
+    height: 15%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .header_log h1{
+    color: var(--white);
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: .1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .header_log h2{
+    color: color-mix(in srgb, var(--black) 30%, var(--white) 70%);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    letter-spacing: .1em;
+  }
+  
+  .header_nav{
+    width: 75%;
+    height: 100vh;
+    background-image: url('../../assets/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  
+  .btn_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 2em 2em;
+    background-color: var(--begeClaro);
+    color: var(--orange);
+    font-size: 1.5em;
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn_nav:hover, .btn_nav:focus{
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+    transform: scaleY(1.05);
+    border: none;
+    outline: none;
+  }
+  
+  .social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: 3em;
+  
+  }
+  
+  .social-icons a{
+    color: var(--orange);
+    transition: color .3s ease-in-out;
+  }
+  
+  .social-icons a:hover{
+    color: var(--white);
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  @media  screen and (max-width: 30em) {
+  
+    .container{
+      flex-direction: column;
+      width: 100vw;
+      height: auto;
+    }
+  
+    .header_log{
+      width: 100%;
+      height: 100px;
+      box-shadow: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      padding: 0;
+  
+    }
+  
+    .logo{
+      width: 100%;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-top: 1em;
+    }
+  
+    .logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  
+    .header_log h1, h2{
+      display: none;
+    }
+  
+    .header_nav{
+      width: 100%;
+      background-image: url('./assets/fundo.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+   .btn_nav {
+     
+      text-align: center;
+    }
+  
+    .social-icons{
+      position: absolute;
+  
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    
+  }
+  
+  @media screen and (min-width: 48em)  and (max-width: 1200px) {
+  
+    .logo{
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .logo img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  
+    .header_log h1{
+      font-size: 1.2em;
+    }
+  
+    .header_log h2{
+      font-size: 1em;
+    }
+  
+    .btn_nav{
+      padding: 1em 2em;
+      font-size: 1.2em;
+    }
+  
+  
+  }
+  
+  
+  
+  
