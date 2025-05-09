@@ -1,0 +1,32 @@
+.header{
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.header img{
+    width: auto;
+    height: 8em;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1em;
+    object-position: center;
+}
+
+
+
+@media screen and (min-width: 48em){
+    .header {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        height: 6em;
+    }
+}
+
