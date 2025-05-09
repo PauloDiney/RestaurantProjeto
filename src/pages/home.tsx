@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       </div>
       <div className='header_nav'>
-        <button className='btn_nav' onClick={() => navigate('/alacarte')}>
+        <button className='btn_nav' onClick={() => navigate('/alacarti')}>
           <span><FontAwesomeIcon icon={faUtensils} /></span>
           <span>A la Carte</span>
         </button>

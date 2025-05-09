@@ -1,0 +1,161 @@
+:root {
+    --black: #000000;
+    --orange: #E04F17;
+    --begeClaro: #F0E7DA;
+    --cinzaEscuro: #1A1A1A;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+
+}
+
+.container_alacarti {
+    background-color: var(--begeClaro);
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.nav_alacarti {
+    width: 100%;
+    overflow-x: auto;
+    /* habilita scroll horizontal */
+    white-space: nowrap;
+    /* impede quebra de linha */
+    padding: 0.5em;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.nav_alacarti::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+.nav_alacarti_list {
+    display: inline-flex;
+    /* em vez de flex puro */
+    gap: 1em;
+    list-style: none;
+    padding: 1em;
+}
+
+.nav_alacarti_list a {
+    text-decoration: none;
+    color: var(--orange);
+    font-weight: 600;
+    background-color: color-mix(in srgb, var(--begeClaro) 60%, var(--white) 40%);
+    padding: 1em 1em;
+    border-radius: 5px;
+    white-space: nowrap;
+    /* impede quebra de texto */
+    transition: background-color 0.5s ease;
+}
+
+.nav_alacarti_list a:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.products_alacarti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    background-color: color-mix(in srgb, var(--begeClaro) 60%, var(--white) 40%);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.content_alacarti {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em;
+}
+
+.card_alacarti {
+    flex: 1 1 calc(48% - 1em); /* dois cards por linha com gap */
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0px 5px 1px rgba(0,0,0,0.1);
+    
+    cursor: pointer;
+}
+
+.card_alacarti.selecionado {
+  background-color: color-mix(in srgb, var(--begeClaro) 70%, #10c000 30%);
+  outline: 1px solid green;
+}
+
+
+
+.lunch_picture {
+    width: 100%;
+    height: 7em;
+    padding: 1em;
+}
+
+.lunch_picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.lunch_description {
+    padding: 0.8em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.lunch_description span {
+    font-size: 1rem;
+    color: var(--cinzaEscuro);
+    margin: 0;
+    font-weight: 700;
+}
+
+.lunch_description p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.pedido_button_container {
+  position: fixed;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.pedido_button {
+  background-color: green;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
