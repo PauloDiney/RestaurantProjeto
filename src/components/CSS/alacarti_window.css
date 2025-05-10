@@ -1,0 +1,75 @@
+:root {
+    --black: #000000;
+    --orange: #E04F17;
+    --begeClaro: #F0E7DA;
+    --cinzaEscuro: #1A1A1A;
+    --white: #FFFFFF;
+}
+
+/* Fundo com blur */
+.blur-background {
+  position: fixed; /* Fixa o fundo */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Cobre toda a largura da tela */
+  height: 100vh; /* Cobre toda a altura da tela */
+  backdrop-filter: blur(5px); /* Aplica o efeito de blur */
+  background-color: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente */
+  z-index: 998; /* Garante que fique abaixo da modal */
+}
+
+/* Modal */
+.product-details-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+    max-width: 80%; /* Limita a largura máxima */
+    max-height: 80%; /* Limita a altura máxima */
+  background-color: var(--begeClaro);
+  border-radius: 10px;
+  padding: 1em;
+  z-index: 999; /* Garante que fique acima do fundo */
+}
+
+.product-details-modal img {
+  display: block; /* Garante que a imagem seja exibida como bloco */
+  max-width: 100%; /* Limita a largura da imagem ao tamanho do modal */
+  height: auto; /* Mantém a proporção da imagem */
+  margin: 0 auto 1em; /* Centraliza a imagem e adiciona espaçamento inferior */
+}
+
+.product-details-modal span {
+  display: block; /* Garante que o texto seja exibido em bloco */
+  font-size: 1.5em; /* Aumenta o tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-bottom: 0.5em; /* Adiciona espaçamento inferior */
+  color: var(--orange);
+}
+
+.product-details-modal p {
+  font-size: 1em; /* Define o tamanho da fonte */
+  line-height: 1.5; /* Melhora o espaçamento entre linhas */
+  color: var(--cinzaEscuro);
+  margin-bottom: 1em; /* Adiciona espaçamento inferior */
+}
+
+.product-details-modal button {
+  margin: 10px 5px; /* Espaçamento entre os botões */
+  padding: 10px 15px; /* Tamanho dos botões */
+  border: none; /* Remove borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de clique */
+}
+
+.product-details-modal button:first-of-type {
+  background-color: #4caf50; /* Cor verde para o botão de adicionar/remover */
+  color: white; /* Texto branco */
+}
+
+.product-details-modal button:last-of-type {
+  background-color: #f44336; /* Cor vermelha para o botão de fechar */
+  color: white; /* Texto branco */
+}

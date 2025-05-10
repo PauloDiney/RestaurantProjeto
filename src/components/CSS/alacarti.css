@@ -84,19 +84,19 @@
 .content_alacarti {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 1em;
     padding: 1em;
 }
 
 .card_alacarti {
-    flex: 1 1 calc(48% - 1em); /* dois cards por linha com gap */
-    background-color: var(--white);
-    border-radius: 5px;
-    box-shadow: 0px 5px 1px rgba(0,0,0,0.1);
-    
-    cursor: pointer;
+  width: 45%;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 5px 1px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
+
 
 .card_alacarti.selecionado {
   background-color: color-mix(in srgb, var(--begeClaro) 70%, #10c000 30%);
